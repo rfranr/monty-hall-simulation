@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reactive Chart Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+      canvas {
+        width: 100%;
+        height: 400px;
+      }
+
+      /* Light theme for dat.GUI */
+      /* FROM : https://github.com/liabru/dat-gui-light-theme */
+      #gui-container .dg.main.taller-than-window .close-button {
+        border-top: 1px solid #ddd;
+      }
+
+      #gui-container .dg.main .close-button {
+        background-color: #e8e8e8;
+      }
+
+      #gui-container .dg.main .close-button:hover {
+        background-color: #ddd;
+      }
+
+      #gui-container .dg {
+        color: #555;
+        text-shadow: none !important;
+      }
+
+      #gui-container .dg.main::-webkit-scrollbar {
+        background: #fafafa;
+      }
+
+      #gui-container .dg.main::-webkit-scrollbar-thumb {
+        background: #bbb;
+      }
+
+      #gui-container .dg li:not(.folder) {
+        background: #fafafa;
+        border-bottom: 1px solid #ddd;
+      }
+
+      #gui-container .dg li.save-row .button {
+        text-shadow: none !important;
+      }
+
+      #gui-container .dg li.title {
+        background: #e8e8e8
+          url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==)
+          6px 10px no-repeat;
+      }
+
+      #gui-container .dg .cr.function:hover,
+      #gui-container .dg .cr.boolean:hover {
+        background: #fff;
+      }
+
+      #gui-container .dg .c input[type="text"] {
+        background: #e9e9e9;
+      }
+
+      #gui-container .dg .c input[type="text"]:hover {
+        background: #eee;
+      }
+
+      #gui-container .dg .c input[type="text"]:focus {
+        background: #eee;
+        color: #555;
+      }
+
+      #gui-container .dg .c .slider {
+        background: #e9e9e9;
+      }
+
+      #gui-container .dg .c .slider:hover {
+        background: #eee;
+      }
+
+      #gui-container .function:last-child {
+        background-color: #0ee !important; /* Background color */
+        color: black !important; /* Text color */
+        font-weight: bold !important;
+        padding: 5px 10px !important; /* Padding for the button */
+        border-radius: 5px !important; /* Rounded corners */
+        border: none !important; /* Remove border */
+        cursor: pointer !important; /* Change cursor to pointer */
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%">
+      <h1>Monty Hall Simulation</h1>
+      <div id="gui-container" style="width: 80%; margin-bottom: 30px"></div>
+      <div style="width: 80%">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
